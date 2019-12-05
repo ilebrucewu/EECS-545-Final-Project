@@ -38,7 +38,7 @@ class ConvNet(nn.Module):
     def __init__(self, chs=1, num_classes=10):
         super(ConvNet, self).__init__()
         self.conv = nn.Sequential(
-            nn.Conv2d(chs, 32, kernel_size=3, stride=1, padding=1),#nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1),
+            nn.Conv2d(chs, 32, kernel_size=3, stride=1, padding=1),
             nn.ReLU(inplace=True),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Conv2d(32, 16, kernel_size=3, padding=1),
